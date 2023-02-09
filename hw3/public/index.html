@@ -1,0 +1,107 @@
+<!-- Trystan Wong -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Homework 2</title>
+  <!-- external link to css stylesheet-->
+  <link rel="stylesheet" href="stylesheets/styles.css">
+  <script
+src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"/>
+ </script>
+
+ <!-- JavaScript Begin -->
+<script src="javascripts/stuff.js"></script>
+
+</head>
+<body>
+  <div id="top">
+    <h1>Cheesecake Order Form</h1>
+    <!-- image of cheesecake -->
+    <img src="https://amandascookin.com/wp-content/uploads/2019/09/cherry-cheesecake-snippet-photo-500x500.jpg"
+    alt="Image of rasberry cheesecake">
+  </div>
+  <br>
+  <!-- Table for Quantity and Topping options -->
+  <div id="inputs">
+    <table>
+      <tbody name = "options" id = "options">
+        <tr>
+          <th>Quantity</th>
+          <th>Topping</th>
+        </tr>
+        <tr>
+          <td>
+            <!-- drop down menu for quantity -->
+            <select name="quantity" id="quantity" value="quantity">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="3">4</option>
+              <option value="3">5</option>
+            </select>
+          </td>
+
+          <td>
+            <!-- radio buttons for toppings -->
+            <form>
+              <input type="radio" id="plain" name="topping" value="plain">
+              <label for="plain">Plain</label><br>
+              <input type="radio" id="cherry" name="topping" value="cherry">
+              <label for="cherry">Cherry</label><br>
+              <input type="radio" id="choc" name="topping" value="chocolate">
+              <label for="choc">Chocolate</label><br>
+            </form>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  <!-- Note text box for instructions -->
+  <label for="notes" id ="n_label">Notes:</label>
+  <br>
+  <textarea name="notes" id="notes" rows="6" cols="50"
+  placeholder="Enter any special intructions here."></textarea>
+  <br>
+  <!-- order button -->
+  <input type="submit" id="order_button" value="ORDER"></input>
+
+  <!-- Message after Order Recieved -->
+  <p id="order_thanks"></p>
+	
+	<p id="order_quantity"></p>
+	
+	<p id="order_flavor"></p>
+	
+	<p id="order_instr"></p>
+
+  </div>
+  <!-- Dropdown menu of months for previous orders -->
+  <div class="orderAndDropdown">
+
+		<p lang="en" id="totalOrders" class="dropdown"> Orders For </p>
+	
+		<div class="dropdown">
+  			<button onclick="month_dropdown()" class="dropbtn" id="selected_month">Jan</button>
+				<div id="month_dropdown" class="dropdown-content">
+					<a class="option" href="#" value"Jan" onClick="changeButtonText(this.innerText)">Jan</a>
+    			<a class="option" href="#" value"Feb" onClick="changeButtonText(this.innerText)">Feb</a>
+    			<a class="option" href="#" value"Mar" onClick="changeButtonText(this.innerText)">Mar</a>
+    			<a class="option" href="#" value"Apr" onClick="changeButtonText(this.innerText)">Apr</a>
+					<a class="option" href="#" value"May" onClick="changeButtonText(this.innerText)">May</a>
+					<a class="option" href="#" value"Jun" onClick="changeButtonText(this.innerText)">Jun</a>
+					<a class="option" href="#" value"Jul" onClick="changeButtonText(this.innerText)">Jul</a>
+					<a class="option" href="#" value"Aug" onClick="changeButtonText(this.innerText)">Aug</a>
+					<a class="option" href="#" value"Sep" onClick="changeButtonText(this.innerText)">Sep</a>
+					<a class="option" href="#" value"Oct" onClick="changeButtonText(this.innerText)">Oct</a>
+					<a class="option" href="#" value"Nov" onClick="changeButtonText(this.innerText)">Nov</a>
+					<a class="option" href="#" value"Dec" onClick="changeButtonText(this.innerText)">Dec</a>
+  				</div>
+		</div>
+	</div>
+    <ul>
+      <li>11 Cherry</li>
+      <li>17 Chocolate</li>
+      <li>31 Plain</li>
+    </ul>
+  </div>
+</body>
+</html>
