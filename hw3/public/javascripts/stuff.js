@@ -63,7 +63,19 @@ window.onclick = function(event) {
   	}
 }
 
-//change the text of the month button to the selected month
+//change the text of the month button to the selected month and change the bullets according to the json file from orders
 function changeButtonText(value) {
+    
 	document.getElementById("selected_month").innerText = value;
+    $.post('/orders', 
+    null
+    ,  
+     //Bullets are updated to reflect the data recieved from orders
+     function changeBullets(data, status){
+
+        document.getElementById("cherryli").innerHTML = data[0].quantity + " " + data[0].topping;
+        document.getElementById("chocolateli").innerHTML = data[1].quantity + " " + data[1].topping;
+        document.getElementById("plainli").innerHTML = data[2].quantity + " " + data[2].topping;
+        
+    });
 }

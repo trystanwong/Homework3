@@ -2,14 +2,13 @@
 const express = require('express');
 const router = express.Router();
 
-router.post('/', (req, res) => {
-    //array of order objects with new elements for the HTML 
-    const orders = [
-        { topping: 'cherry', quantity: 2 },
-        { topping: 'plain', quantity: 2 },
-        { topping: 'chocolate', quantity: 2 }
-    ];
-    res.send(orders);
+router.post('/', function(req, res) {
+  //Array of order objects to be used for HTML side
+  const orders = [
+    { topping: 'Cherry', quantity: 20 },
+    { topping: 'Plain', quantity: 10 },
+    { topping: 'Chocolate', quantity: 100 }
+];
+res.send(orders);
 });
-
 module.exports = router;

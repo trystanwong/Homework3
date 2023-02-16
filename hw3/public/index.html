@@ -95,9 +95,12 @@ src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"/>
 		</div>
 	</div>
     <ul>
-      <li>11 Cherry</li>
-      <li>17 Chocolate</li>
-      <li>31 Plain</li>
+      <!--Bullets of past orders should change with data from orders-->
+      <ul class="quantityAndToppings">
+        <li id="cherryli" onClick="changeButtonText.changeBulletsText.innerText"> 1 cherry </li>
+        <li id="chocolateli" onClick="changeButtonText.changeBulletsText.innerText"> 2 chocolate </li>
+        <li id="plainli" onClick="changeButtonText.changeBulletsText.innerText"> 3 plain </li>
+      </ul>
     </ul>
   </div>
 </body>
